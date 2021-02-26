@@ -1,5 +1,5 @@
 <?php
-
+namespace App;
 use App\Models\School;
 use App\Models\Student;
 use Illuminate\Database\Eloquent\Model;

@@ -2,6 +2,7 @@
     // Route::middleware('auth:api')->get('/user', function (Request $request) {
     //     return $request->user();
     // });
+    use App\Http\Controllers\StudentController;
 
 /**
  * API endpoints for handling basic student CRUD operations.
@@ -38,4 +39,6 @@ Route::apiResource('students', 'StudentController');
  * 5. In the JSON response payload, include the full_name for each student
  *    by combining the student's first and last name.
  */
-Route::get('students/search', 'StudentSearchController@index');
+
+ //Updated endpoint name to avoid collision with GET students/{id}
+Route::get('search', 'StudentSearchController@search');

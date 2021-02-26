@@ -1,9 +1,10 @@
 <?php
 
+namespace App;
 use App\Models\Classroom;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Student extends Model
 {
     /**
@@ -11,6 +12,7 @@ class Student extends Model
      *
      * @var array
      */
+    use SoftDeletes;
     protected $fillable = [
         'student_number',
         'first_name',
